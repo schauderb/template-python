@@ -1,0 +1,12 @@
+name: Python CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  compliance:
+    uses: schauderb/compliance-workflows/.github/workflows/compliance.yml@main
+    with:
+      language: python
